@@ -5,7 +5,7 @@ import json
 
 app = FastAPI()
 app.include_router(wellknown)
-app.add_middleware(CORSMiddleware, allow_origins=["https://bing.com"])
+app.add_middleware(CORSMiddleware, allow_origins=["https://bing.com", "https://localhost", "http://localhost"])
 
 with open("./data/products.json", "r") as f:
     products = json.load(f)
