@@ -20,9 +20,15 @@ def get_ai_plugin():
 
 @wellknown.get("/openapi.yaml", include_in_schema=False)
 async def openapi_yaml(request: Request):
-    return FileResponse(
-        ".well-known/openapi.yaml",
-        media_type="text/vnd.yaml")
+    openapi = request.app.openapi()
+    openapi["servers"] = [{"url": get_host(request)}]
+    ai_plugin = get_ai_plugin()
+    openapi["info"]["title"] = ai_plugin["name_for_human"]
+    openapi["info"]["description"] = ai_plugin["description_for_human"]
+    return Response(
+        content=yaml.dump(openapi),
+        media_type="text/vnd.yaml",
+    )
 
 
 @wellknown.get("/logo.png", include_in_schema=False)
