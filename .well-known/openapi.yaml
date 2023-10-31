@@ -45,6 +45,7 @@ paths:
       - in: query
         name: query
         required: false
+        description: something
         schema:
           title: Query
           type: string
