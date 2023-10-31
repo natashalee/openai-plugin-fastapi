@@ -34,7 +34,7 @@ info:
   description: Search through Contoso's wide range of outdoor and recreational products.
   title: Contoso Product Search
   version: 0.1.0
-openapi: 3.1.0
+openapi: 3.0.1
 paths:
   /products:
     get:
