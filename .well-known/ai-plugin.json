@@ -9,7 +9,7 @@
   },
   "api": {
     "type": "openapi",
-    "is_user_authenticated": "false",
+    "is_user_authenticated": false,
     "url": "https://ca-api-fbwdyd7cypsak.agreeablemoss-1b5b6432.westus.azurecontainerapps.io/.well-known/openapi.yaml"
   },
   "logo_url": "https://ca-api-fbwdyd7cypsak.agreeablemoss-1b5b6432.westus.azurecontainerapps.io/.well-known/logo.png",
